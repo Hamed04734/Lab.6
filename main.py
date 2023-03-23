@@ -24,6 +24,16 @@ def encode(password):
 #encodes password based on the digits range
     return encoded_password
 
+def decode(encoded_password):
+    arsenal = ''
+    for i in secret:
+        receiver = int(i)
+        receiver -= 3
+        if receiver < 0:
+            receiver += 10
+        ta_da += str(receiver)
+    print(f"The encoded password is {encoded_password}, and the original password is {arsenal}")
+    print("")
 
 if __name__ == "__main__":
     stop_menu = False
